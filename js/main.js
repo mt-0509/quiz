@@ -1,22 +1,15 @@
 'use strict';
 
 {
-
   const DATA_URL = 'https://opentdb.com/api.php?amount=10';
   fetch(DATA_URL)
   .then(function(response) {
     return response.json();
   })
   .then(function(jsonDATA) {
-    const json = {jsonDATA};
-    const obj = JSON.parse(json);
-    
-
-    console.log(obj.length);
-    
-    
-
+    var obj = jsonDATA;
+    // オブジェクトの取り出し方が不明
+    console.log(response.results[0].category);
   })
-
   
 }

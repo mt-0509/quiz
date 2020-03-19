@@ -1,22 +1,6 @@
 'use strict';
 
 {
-<<<<<<< HEAD
-  // 外部APIを呼び出す
-  var request = new XMLHttpRequest();
-  request.open('GET', 'https://opentdb.com/api.php?amount=10', true);
-  request.responseType = 'text';
-
-  // レスポンスが帰って来たときの処理
-  request.onload = function () {
-    var data = this.response;
-    
-    // documentに表示する 
-    document.getElementById('problem').innerHTML = data;
-  };
-
-  request.send();
-=======
   const DATA_URL = 'https://opentdb.com/api.php?amount=10';
   fetch(DATA_URL)
   .then(function(response) {
@@ -26,9 +10,19 @@
     var obj = jsonDATA;
     // オブジェクトを取り出す
     console.log(obj.results[1]);
+
+    // 取得したデータを表示する
+    // 問題文
+    document.getElementById('question').innerHTML = obj.results[1].question;
+
+    // カテゴリー
+    document.getElementById('category').innerHTML = obj.results[1].category;
+
+    // 難易度
+    document.getElementById('difficulty').innerHTML = obj.results[1].difficulty;
+
+
   })
 
   
-  
->>>>>>> sub1
 }

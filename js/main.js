@@ -8,8 +8,10 @@
   })
   .then(function(jsonDATA) {
     var obj = jsonDATA;
-    // オブジェクトの取り出し方が不明
-    console.log(response.results[0].category);
+    // オブジェクトを取り出す
+    console.log(obj.results[1]);
   })
+
+  
   
 }

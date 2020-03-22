@@ -45,8 +45,15 @@
       document.getElementById('answer-four').appendChild(btnfour);
       btnfour.innerHTML = obj.results[0].incorrect_answers[2];
 
+      // 
+      var x = obj.results[0].correct_answer;
+      var y = obj.results[0].incorrect_answers[0];
+      var z = obj.results[0].incorrect_answers[1];
+      var v = obj.results[0].incorrect_answers[2];
+      
+
       // ランダムに使う配列
-      var arr = [btnone, btntwo, btnthree, btnfour];
+      var arr = [x, y, z, v];
       var a = arr.length;
 
       // シャッフルアルゴリズム
@@ -59,24 +66,26 @@
 
       // シャッフルされた配列の要素を順番に表示する
       arr.forEach( function (value) {
-        document.getElementById('answer-one').value;
-        document.getElementById('answer-two').value;
-        document.getElementById('answer-three').value;
-        document.getElementById('answer-four').value;
+        btnone.innerHTML = x.value
+        btntwo.innerHTML =y.value
+        btnthree.innerHTML =z.value
+        btnfour.innerHTML =v.value
         
       });
-      
-  
+
+
       // 取得したデータを表示する
       // 問題文
-      document.getElementById('question').innerHTML = obj.results[1].question;
-  
+      document.getElementById('question').innerHTML = obj.results[0].question;
+      
       // カテゴリー
-      document.getElementById('category').innerHTML = obj.results[1].category;
+      document.getElementById('category').innerHTML = obj.results[0].category;
   
       // 難易度
-      document.getElementById('difficulty').innerHTML = obj.results[1].difficulty;
-  });
+      document.getElementById('difficulty').innerHTML = obj.results[0].difficulty;
+      
+    });
+  
 
 
 

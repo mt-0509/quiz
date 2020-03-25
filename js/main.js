@@ -45,8 +45,10 @@
       document.getElementById('answer-four').appendChild(btnfour);
       btnfour.innerHTML = obj.results[0].incorrect_answers[2];
 
-      // 
-      var x = obj.results[0].correct_answer;
+      
+
+
+      var x = obj.results[0].correct_answer[0];
       var y = obj.results[0].incorrect_answers[0];
       var z = obj.results[0].incorrect_answers[1];
       var v = obj.results[0].incorrect_answers[2];
@@ -66,12 +68,14 @@
 
       // シャッフルされた配列の要素を順番に表示する
       arr.forEach( function (value) {
-        btnone.innerHTML = x.value
-        btntwo.innerHTML =y.value
-        btnthree.innerHTML =z.value
-        btnfour.innerHTML =v.value
-        
+        btnone.innerHTML.value
+        btntwo.innerHTML.value
+        btnthree.innerHTML.value
+        btnfour.innerHTML.value
       });
+
+
+
 
 
       // 取得したデータを表示する
@@ -85,12 +89,5 @@
       document.getElementById('difficulty').innerHTML = obj.results[0].difficulty;
       
     });
-  
-
-
-
-
   })
-
-  
 }

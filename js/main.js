@@ -33,7 +33,7 @@
       let btnthree = document.createElement('button');
       let btnfour = document.createElement('button');
 
-      document.getElementById('answer-one').appendChild(btnone);
+      // document.getElementById('answer-one').appendChild(btnone);
       // btnone.innerHTML = obj.results[0].correct_answer;
 
       document.getElementById('answer-two').appendChild(btntwo);
@@ -46,10 +46,10 @@
       // btnfour.innerHTML = obj.results[0].incorrect_answers[2];
 
       
-      var xx = btnone.innerHTML;
-      var yy = btntwo.innerHTML;
-      var zz = btnthree.innerHTML;
-      var vv = btnfour.innerHTML;
+      // var xx = btnone.innerHTML;
+      // var yy = btntwo.innerHTML;
+      // var zz = btnthree.innerHTML;
+      // var vv = btnfour.innerHTML;
 
 
 
@@ -79,7 +79,27 @@
         // btnthree.innerHTML.value
         // btnfour.innerHTML.value
         console.log(value);
+        
+        push();
       });
+
+      // function dofour() {
+      //   push();
+      //   push();
+      //   push();
+      //   push();
+      // }
+
+      // dofour();
+
+      //
+      function push () {
+        let btnone = document.createElement('button');
+        document.getElementById('answer-one').appendChild(btnone);
+        btnone.innerHTML = value;
+      }
+
+      
 
       
 

@@ -34,28 +34,34 @@
       let btnfour = document.createElement('button');
 
       document.getElementById('answer-one').appendChild(btnone);
-      btnone.innerHTML = obj.results[0].correct_answer;
+      // btnone.innerHTML = obj.results[0].correct_answer;
 
       document.getElementById('answer-two').appendChild(btntwo);
-      btntwo.innerHTML = obj.results[0].incorrect_answers[0];
+      // btntwo.innerHTML = obj.results[0].incorrect_answers[0];
 
       document.getElementById('answer-three').appendChild(btnthree);
-      btnthree.innerHTML = obj.results[0].incorrect_answers[1];
+      // btnthree.innerHTML = obj.results[0].incorrect_answers[1];
 
       document.getElementById('answer-four').appendChild(btnfour);
-      btnfour.innerHTML = obj.results[0].incorrect_answers[2];
+      // btnfour.innerHTML = obj.results[0].incorrect_answers[2];
 
       
+      var xx = btnone.innerHTML;
+      var yy = btntwo.innerHTML;
+      var zz = btnthree.innerHTML;
+      var vv = btnfour.innerHTML;
+
 
 
       var x = obj.results[0].correct_answer[0];
       var y = obj.results[0].incorrect_answers[0];
       var z = obj.results[0].incorrect_answers[1];
       var v = obj.results[0].incorrect_answers[2];
+
       
 
       // ランダムに使う配列
-      var arr = [x, y, z, v];
+      var arr = [ y, z, v];
       var a = arr.length;
 
       // シャッフルアルゴリズム
@@ -68,11 +74,14 @@
 
       // シャッフルされた配列の要素を順番に表示する
       arr.forEach( function (value) {
-        btnone.innerHTML.value
-        btntwo.innerHTML.value
-        btnthree.innerHTML.value
-        btnfour.innerHTML.value
+        // btnone.innerHTML.value
+        // btntwo.innerHTML.value
+        // btnthree.innerHTML.value
+        // btnfour.innerHTML.value
+        console.log(value);
       });
+
+      
 
 
 
